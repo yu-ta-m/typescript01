@@ -1,14 +1,30 @@
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
-    "version": "0.1.0",
-    "tasks": [
+    "version": "2.0.0" ,
+    "tasks":[
         {
+            "label": "typescript",
             "command": "tsc",
-            "isShellCommand": true,
-            "args": ["-p","."],
-            "showOutput": "silent",
+            "group": "build",
+            "type": "shell",
+            "args": ["-p","${fileDirname}"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
             "problemMatcher": "$tsc"
+        },
+        {
+            "label": "echo",
+            "group":"test",
+            "type": "shell",
+            "command": "echo",
+            "args": ["${fileDirname}"],
+            "presentation":{
+                "reveal": "always",
+                "panel": "new"
+            }
         }
-    ]
+]
 }
