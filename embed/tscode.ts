@@ -1,0 +1,1 @@
+document.body.innerHTML = `64の平方根は${Math.sqrt(64)}`;
